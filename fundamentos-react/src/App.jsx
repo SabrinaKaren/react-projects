@@ -15,12 +15,17 @@ import DiretaPai from './components/comunicacao/DiretaPai'
 import IndiretaPai from './components/comunicacao/IndiretaPai'
 import Input from './components/formulario/Input'
 import Contador from './components/contador/Contador'
+import Mega from './components/mega/Mega'
 
 const fun = _ =>
     <div className="App">
         <h1>Fundamentos React</h1>
 
         <div className="Cards">
+            
+            <Card titulo="#13 - Mega" color="#B9006E">
+                <Mega quantidade={6} />
+            </Card>
             
             <Card titulo="#12 - Contador" color="#424242">
                 <Contador numeroInicial={10} />
