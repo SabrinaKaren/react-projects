@@ -1,6 +1,7 @@
 import Card from './Card'
+import { connect } from 'react-redux'
 
-const Soma = props => {
+const Sorteio = props => {
 
     const { min, max } = props
     const aleatorio = parseInt(Math.random() * (max - min)) + min
@@ -18,4 +19,11 @@ const Soma = props => {
 
 }
 
-export default Soma
+function mapStateToProps(state) {
+    return {
+        min: state.numeros.min,
+        max: state.numeros.max
+    }
+}
+
+export default connect(mapStateToProps)(Sorteio)
