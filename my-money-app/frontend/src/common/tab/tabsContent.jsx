@@ -2,7 +2,7 @@ import React from "react"
 
 const TabsContent = props => {
     return (
-        <div className="tab-cantent">
+        <div className="tab-content">
             {props.children}
         </div>
     )

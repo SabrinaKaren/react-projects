@@ -3,10 +3,10 @@ import { BILLING_CYCLES_FETCHED } from '../common/consts/actionsType'
 import { toastr } from 'react-redux-toastr'
 import { initialize } from 'redux-form'
 import { showTabs, selectTab } from '../common/tab/tabActions'
-import { BILLING_CYCLE_FORM } from '../common/consts/forms'
+import { FORM_BILLING_CYCLE } from '../common/consts/forms'
 import { TAB_CREATE, TAB_DELETE, TAB_LIST, TAB_UPDATE } from '../common/consts/tabs'
 
-const INITIAL_VALUES = {}
+const INITIAL_VALUES = { credits: [{}], debts: [{}] }
 const BASE_URL = 'http://localhost:3003/api'
 
 export function getList() {
@@ -33,7 +33,7 @@ export function showUpdate(billingCycle) {
     return [
         showTabs(TAB_UPDATE),
         selectTab(TAB_UPDATE),
-        initialize(BILLING_CYCLE_FORM, billingCycle)
+        initialize(FORM_BILLING_CYCLE, billingCycle)
     ]
 }
 
@@ -41,7 +41,7 @@ export function showDelete(billingCycle) {
     return [
         showTabs(TAB_DELETE),
         selectTab(TAB_DELETE),
-        initialize(BILLING_CYCLE_FORM, billingCycle)
+        initialize(FORM_BILLING_CYCLE, billingCycle)
     ]
 }
 
@@ -50,7 +50,7 @@ export function init() {
         showTabs(TAB_LIST, TAB_CREATE),
         selectTab(TAB_LIST),
         getList(),
-        initialize(BILLING_CYCLE_FORM, INITIAL_VALUES)
+        initialize(FORM_BILLING_CYCLE, INITIAL_VALUES)
     ]
 }
 

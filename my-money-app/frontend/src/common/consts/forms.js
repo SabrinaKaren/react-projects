@@ -1,1 +1,1 @@
-export const BILLING_CYCLE_FORM = 'billingCycleForm'
+export const FORM_BILLING_CYCLE = 'billingCycleForm'
