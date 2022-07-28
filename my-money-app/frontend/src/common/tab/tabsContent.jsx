@@ -1,11 +1,3 @@
-import React from "react"
+import React from "react";
 
-const TabsContent = props => {
-    return (
-        <div className="tab-cantent">
-            {props.children}
-        </div>
-    )
-}
-
-export default TabsContent
+export default props => <div className="tab-content">{props.children}</div>;
