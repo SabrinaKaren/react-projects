@@ -5,6 +5,7 @@ import labelAndInput from "../common/form/labelAndInput"
 import { init } from "./billingCycleActions"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
+import CreditList from "./creditList"
 
 class BillingCycleForm extends Component {
 
@@ -42,6 +43,8 @@ class BillingCycleForm extends Component {
                         placeholder='Informe o ano'
                         readOnly={readOnly}
                     />
+
+                    <CreditList cols='12 6' readOnly={readOnly} />
                     
                 </div>
 
