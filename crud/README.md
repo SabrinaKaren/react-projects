@@ -1,3 +1,3 @@
-# Calculadora
+# CRUD
 
-Projeto simples de Calculadora desenvolvido utilizando React.
+Projeto simples de CRUD desenvolvido utilizando React.
